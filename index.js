@@ -30,7 +30,7 @@ bot.on('message', async msg => {
 							{
 								text: "📚 Kurslarni ko'rish",
 								web_app: {
-									url:'https://telegram-bot1-woad.vercel.app/',
+									url:'https://boom-shop-mlaa.onrender.com/',
 								},
 							},
                             {
@@ -72,9 +72,7 @@ bot.on('message', async msg => {
 						[
 							{
 								text: "📚 Kurslarni ko'rish",
-								web_app: {
-									url: 'https://telegram-bot1-woad.vercel.app/',
-								},
+								url: 'https://boom-shop-mlaa.onrender.com/',
 							},
                             {
 								text: '🟢 Google',
