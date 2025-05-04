@@ -2,7 +2,7 @@ const TelegramBot = require('node-telegram-bot-api');
 const express = require('express');
 const cors = require('cors');
 
-const token = '7579674261:AAG15vAWWvhFQW2KxRq-NC41NFwvBf2NTsk';
+const token = '7523714016:AAHHMIvcVGob6MdDPk_O0FOku_p-EucEE9I';
 
 const bot = new TelegramBot(token, { polling: true });
 const app = express();
@@ -22,13 +22,13 @@ bot.on('message', async msg => {
 	if (text === '/start') {
 		await bot.sendMessage(
 			chatId,
-			'Sammi.ac platformasida bor kurslarni sotib olishingiz mumkin',
+			'Sammi.ac platformasi orqali yasalgan',
 			{
 				reply_markup: {
 					keyboard: [
 						[
 							{
-								text: "📚 Kurslarni ko'rish",
+								text: "🛒 Boom shop",
 								web_app: {
 									url:'https://boom-shop-mlaa.onrender.com/',
 								},
@@ -62,45 +62,7 @@ bot.on('message', async msg => {
 		);
 	}
 
-	if (text === '/courses') {
-		await bot.sendMessage(
-			chatId,
-			'Sammi.ac platformasida bor kurslarni sotib olishingiz mumkin',
-			{
-				reply_markup: {
-					inline_keyboard: [
-						[
-							{
-								text: "📚 Kurslarni ko'rish",
-								url: 'https://boom-shop-mlaa.onrender.com/',
-							},
-                            {
-								text: '🟢 Google',
-								web_app:{
-                                    url: 'https://google.com',
-                                }
-							},
-						],
-						[
-							
-							{
-								text: '📺 YouTube',
-								web_app:{
-                                    url: 'https://youtube.com',
-                                }
-							},
-							{
-								text: '📸 Instagram',
-							web_app:{
-                                url: 'https://instagram.com',
-                            }
-							},
-						],
-					],
-				},
-			}
-		);
-	}
+	
 
 	if (msg.web_app_data?.data) {
 		try {
